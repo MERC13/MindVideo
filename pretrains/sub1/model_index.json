@@ -1,0 +1,12 @@
+{
+  "_class_name": "StableDiffusionPipeline",
+  "_diffusers_version": "0.6.0",
+  "scheduler": [
+    "diffusers",
+    "PNDMScheduler"
+  ],
+  "vae": [
+    "diffusers",
+    "AutoencoderKL"
+  ]
+}

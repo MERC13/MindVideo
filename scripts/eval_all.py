@@ -2,6 +2,13 @@ import os, sys
 import numpy as np
 import torch
 import torch.nn.functional as F
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+SRC_DIR = os.path.join(REPO_ROOT, "src")
+if SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
+
 from MindVideo import create_Wen_dataset, create_Wen_test_data_only
 from MindVideo import fMRIEncoder
 import argparse
@@ -122,6 +129,7 @@ def main(
                     subjects=subjects, window_size=window_size, fps=fps)
             
         num_voxels = dataset_test.num_voxels
+        # dataset_test = torch.utils.data.Subset(dataset_test, range(min(10, len(dataset_test))))
     else:
         raise NotImplementedError(f'{dataset} not implemented')
 

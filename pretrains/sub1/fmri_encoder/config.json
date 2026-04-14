@@ -1,0 +1,20 @@
+{
+  "_class_name": "fMRIEncoder",
+  "_comment": "subject1 pretrained with CLIP contrastive. windows size 2",
+  "_diffusers_version": "0.14.0",
+  "_pretrained_dataset": "hcp+god",
+  "depth": 24,
+  "dropout": 0.0,
+  "embed_dim": 1024,
+  "in_chans": 1,
+  "logit_scale_init_value": 2.6592,
+  "mlp_ratio": 1.0,
+  "num_heads": 16,
+  "num_voxels": 6016,
+  "out_channel": 77,
+  "out_dim": 768,
+  "patch_size": 16,
+  "use_norm": false,
+  "use_temp_attn": true,
+  "window_size": 2
+}
